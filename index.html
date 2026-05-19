@@ -24,13 +24,6 @@
       position: relative;
     }
     
-    .video-bg {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: -2;
-    }
-    
     .overlay {
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
@@ -174,8 +167,7 @@
   </div>
 
   <main>
-    <section class="hero-section">
-      <iframe class="video-bg" src="https://www.youtube-nocookie.com/embed/S2O5jN1G9E0?autoplay=1&mute=1&loop=1&playlist=S2O5jN1G9E0&controls=0&showinfo=0&rel=0" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+    <section class="hero-section" style="background-image: url('assets/images/themepark.png'); background-size: cover; background-position: center;">
       <div class="overlay"></div>
       
       <div class="hero-content">
