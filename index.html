@@ -3,289 +3,250 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>American Dream Mall — Interactive Sales Deck</title>
+  <title>Dream State | American Dream Mall</title>
   
-  <!-- SEO & Meta -->
-  <meta name="description" content="The most ambitious retail destination in America. Explore leasing and partnership opportunities at American Dream.">
-  
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
   
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/deck.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <style>
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+      position: relative;
+    }
+    
+    .video-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(to bottom, rgba(10,10,11,0.6) 0%, rgba(10,10,11,0.8) 100%);
+      z-index: -1;
+    }
+    
+    .hero-content {
+      text-align: center;
+      z-index: 1;
+      padding-top: 100px;
+    }
+    
+    .stat-strip {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      color: var(--text-secondary);
+    }
+    
+    .cta-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+    
+    .cta-card {
+      text-decoration: none;
+      color: inherit;
+      text-align: left;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .cta-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-gold);
+    }
+    
+    .cta-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--accent-gold);
+    }
+    
+    .cta-card p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .cta-link {
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite;
+      color: var(--accent-gold);
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+      40% { transform: translateY(-10px) translateX(-50%); }
+      60% { transform: translateY(-5px) translateX(-50%); }
+    }
+    
+    .stats-row {
+      background: #050505;
+      padding: 6rem 5%;
+      border-top: 1px solid rgba(201, 168, 76, 0.2);
+    }
+    
+    .stat-box {
+      text-align: center;
+    }
+    
+    .stat-val {
+      font-family: var(--font-headline);
+      font-size: 3.5rem;
+      color: var(--accent-gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    
+    .brand-statement {
+      text-align: center;
+      padding: 6rem 5%;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-family: var(--font-headline);
+    }
+  </style>
 </head>
 <body>
+  
+  <div class="page-transition-overlay"></div>
 
-  <!-- Progress Bar -->
-  <div class="progress-bar"></div>
-
-  <!-- Persistent Side Navigation -->
-  <nav class="side-nav">
-    <div class="nav-dots">
-      <a href="#hero" class="nav-dot active"><span class="nav-label">Intro</span></a>
-      <a href="#why" class="nav-dot"><span class="nav-label">01. Why American Dream</span></a>
-      <a href="#retail" class="nav-dot"><span class="nav-label">02. Retail</span></a>
-      <a href="#luxury" class="nav-dot"><span class="nav-label">03. Luxury</span></a>
-      <a href="#dining" class="nav-dot"><span class="nav-label">04. Dining & Lifestyle</span></a>
-      <a href="#entertainment" class="nav-dot"><span class="nav-label">05. Entertainment</span></a>
-      <a href="#events" class="nav-dot"><span class="nav-label">06. Events & Platform</span></a>
-      <a href="#opportunity" class="nav-dot"><span class="nav-label">07. The Opportunity</span></a>
-    </div>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <section id="hero">
-    <div class="video-background">
-      <!-- YouTube Embed: muted, autoplay, looping, nocookie, minimal controls -->
-      <iframe src="https://www.youtube-nocookie.com/embed/S2O5jN1G9E0?autoplay=1&mute=1&loop=1&playlist=S2O5jN1G9E0&controls=0&showinfo=0&rel=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
-    </div>
+  <!-- Persistent Header -->
+  <header class="top-nav">
+    <a href="index.html" class="nav-brand">DREAM STATE</a>
     
-    <div class="hero-content">
-      <h1 class="hero-title gsap-reveal">THE MOST AMBITIOUS RETAIL DESTINATION IN AMERICA</h1>
-      <div class="hero-ctas gsap-reveal" style="transition-delay: 0.2s;">
-        <a href="#retail" class="btn">Retail Leasing</a>
-        <a href="#events" class="btn">Brand Partnerships</a>
-        <a href="#events" class="btn">Event Booking</a>
-      </div>
-    </div>
-  </section>
+    <nav class="nav-links">
+      <a href="pages/why.html" class="nav-link"><span>01</span> WHY</a>
+      <a href="pages/retail.html" class="nav-link"><span>02</span> RETAIL</a>
+      <a href="pages/luxury.html" class="nav-link"><span>03</span> LUXURY</a>
+      <a href="pages/dining.html" class="nav-link"><span>04</span> DINING</a>
+      <a href="pages/entertainment.html" class="nav-link"><span>05</span> ENTERTAINMENT</a>
+      <a href="pages/events.html" class="nav-link"><span>06</span> EVENTS</a>
+    </nav>
+    
+    <a href="pages/opportunity.html" class="nav-cta">GET IN TOUCH</a>
+    
+    <button class="mobile-menu-btn"><i class="ti ti-menu-2"></i></button>
+  </header>
 
-  <!-- 01 WHY AMERICAN DREAM -->
-  <section id="why">
-    <div class="container">
-      <div class="grid-2-col">
-        <div class="content-left">
-          <h2 class="text-gold mb-2">01.</h2>
-          <h3 class="section-title">Why American Dream</h3>
-          <p class="subtitle">Located in the heart of the New York Metropolitan area, serving the most densely populated and affluent demographic in the United States.</p>
-          
-          <div class="glass-card gsap-reveal">
-            <h4>Reach & Demographics</h4>
-            <p>20M people within a 1-hour drive. An unparalleled mix of high-net-worth local residents and domestic/international tourists.</p>
-          </div>
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay">
+    <nav class="mobile-nav-links">
+      <a href="pages/why.html" class="nav-link"><span>01</span> WHY AMERICAN DREAM</a>
+      <a href="pages/retail.html" class="nav-link"><span>02</span> RETAIL LEASING</a>
+      <a href="pages/luxury.html" class="nav-link"><span>03</span> THE LUXURY WING</a>
+      <a href="pages/dining.html" class="nav-link"><span>04</span> DINING & LIFESTYLE</a>
+      <a href="pages/entertainment.html" class="nav-link"><span>05</span> ENTERTAINMENT</a>
+      <a href="pages/events.html" class="nav-link"><span>06</span> EVENTS & PLATFORM</a>
+      <a href="pages/opportunity.html" class="nav-link" style="color: var(--accent-gold)">GET IN TOUCH</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero-section">
+      <iframe class="video-bg" src="https://www.youtube-nocookie.com/embed/S2O5jN1G9E0?autoplay=1&mute=1&loop=1&playlist=S2O5jN1G9E0&controls=0&showinfo=0&rel=0" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+      <div class="overlay"></div>
+      
+      <div class="hero-content">
+        <span class="eyebrow hero-anim-fade">AMERICAN DREAM · EAST RUTHERFORD, NJ</span>
+        <h1 class="section-title hero-anim-slide" style="max-width: 1000px; margin: 0 auto 1rem auto; text-shadow: 0 4px 20px rgba(0,0,0,0.8);">The Most Ambitious Retail Destination in America</h1>
+        
+        <div class="stat-strip hero-anim-fade" style="animation-delay: 0.5s;">
+          <span>3M SQ FT</span>
+          <span>450+ BRANDS</span>
+          <span>40M ANNUAL VISITORS</span>
         </div>
         
-        <div class="stats-grid">
-          <div class="stat-item gsap-reveal">
-            <div class="stat-number" data-target="3" data-suffix="M">0</div>
-            <div class="stat-label">Square Feet</div>
-          </div>
-          <div class="stat-item gsap-reveal" style="transition-delay: 0.1s;">
-            <div class="stat-number" data-target="45" data-suffix="M">0</div>
-            <div class="stat-label">Annual Visitors</div>
-          </div>
-          <div class="stat-item gsap-reveal" style="transition-delay: 0.2s;">
-            <div class="stat-number" data-target="500" data-prefix="+" data-suffix="">0</div>
-            <div class="stat-label">Stores & Attractions</div>
-          </div>
-          <div class="stat-item gsap-reveal" style="transition-delay: 0.3s;">
-            <div class="stat-number" data-target="5" data-prefix="$" data-suffix="B">0</div>
-            <div class="stat-label">Investment</div>
-          </div>
+        <div class="cta-cards hero-anim-slide" style="animation-delay: 0.8s;">
+          <a href="pages/retail.html" class="glass-card cta-card">
+            <h3>RETAIL LEASING</h3>
+            <p>Claim your flagship</p>
+            <span class="cta-link">Explore <i class="ti ti-arrow-right"></i></span>
+          </a>
+          <a href="pages/events.html" class="glass-card cta-card">
+            <h3>BRAND PARTNERSHIPS</h3>
+            <p>Own the moment</p>
+            <span class="cta-link">Explore <i class="ti ti-arrow-right"></i></span>
+          </a>
+          <a href="pages/events.html" class="glass-card cta-card">
+            <h3>EVENTS & VENUES</h3>
+            <p>Book the stage</p>
+            <span class="cta-link">Explore <i class="ti ti-arrow-right"></i></span>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+      
+      <div class="scroll-indicator">
+        <i class="ti ti-chevron-down" style="font-size: 2rem;"></i>
+      </div>
+    </section>
 
-  <!-- 02 RETAIL -->
-  <section id="retail">
-    <div class="container">
-      <h2 class="text-gold mb-2">02.</h2>
-      <h3 class="section-title">Retail Strategy</h3>
-      <p class="subtitle gsap-reveal">A curated tenant mix designed to maximize foot traffic and cross-pollinate audiences from our world-class entertainment offerings.</p>
-      
-      <div class="tiers-grid">
-        <div class="tier-card glass-card">
-          <h3>Flagship</h3>
-          <p>Dominant brand statements with significant square footage and custom architectural facades.</p>
+    <section class="stats-row">
+      <div class="container grid-4">
+        <div class="stat-box reveal">
+          <div class="stat-val"><span class="counter-val" data-target="3">0</span>M</div>
+          <div class="eyebrow">Square Feet</div>
         </div>
-        <div class="tier-card glass-card">
-          <h3>Standard Retail</h3>
-          <p>High-visibility inline stores benefiting from adjacent entertainment and anchor traffic.</p>
+        <div class="stat-box reveal delay-100">
+          <div class="stat-val"><span class="counter-val" data-target="40">0</span>M</div>
+          <div class="eyebrow">Annual Visitors</div>
         </div>
-        <div class="tier-card glass-card">
-          <h3>Pop-Up</h3>
-          <p>Short-term, high-impact activations in premium corridors to test concepts or launch products.</p>
+        <div class="stat-box reveal delay-200">
+          <div class="stat-val"><span class="counter-val" data-target="450">0</span>+</div>
+          <div class="eyebrow">Brands</div>
+        </div>
+        <div class="stat-box reveal delay-300">
+          <div class="stat-val"><span class="counter-val" data-target="15">0</span>+</div>
+          <div class="eyebrow">Entertainment Venues</div>
         </div>
       </div>
-      
-      <div class="mt-4 text-center gsap-reveal">
-        <br><br>
-        <a href="#opportunity" class="btn btn-solid">Explore Leasing Opportunities →</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 03 LUXURY -->
-  <section id="luxury">
-    <div class="container">
-      <h2 class="text-gold mb-2">03.</h2>
-      <h3 class="section-title">The Avenue</h3>
-      <p class="subtitle gsap-reveal">The only luxury retail experience of this scale in the tri-state area. Anchored by Saks Fifth Avenue, an elevated environment for the world's most prestigious brands.</p>
-      
-      <div class="luxury-gallery">
-        <div class="luxury-brand">HERMÈS</div>
-        <div class="luxury-brand">TIFFANY & CO.</div>
-        <div class="luxury-brand">SAINT LAURENT</div>
-        <div class="luxury-brand">BALENCIAGA</div>
-        <div class="luxury-brand">GUCCI</div>
-        <div class="luxury-brand">DOLCE & GABBANA</div>
-        <div class="luxury-brand">MULBERRY</div>
-        <div class="luxury-brand">SAKS FIFTH AVENUE</div>
+    <section class="brand-statement reveal">
+      "Where scale becomes experience."
+      <div style="margin-top: 3rem;">
+        <a href="pages/why.html" class="btn btn-solid">Continue Exploring <i class="ti ti-arrow-right" style="margin-left: 0.5rem;"></i></a>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- 04 DINING & LIFESTYLE -->
-  <section id="dining">
-    <div class="container">
-      <div class="grid-2-col">
-        <div>
-          <h2 class="text-gold mb-2">04.</h2>
-          <h3 class="section-title">Dining & Lifestyle</h3>
-          <p class="subtitle gsap-reveal">Extending dwell times through comprehensive food and beverage offerings, from fast-casual to experiential fine dining.</p>
-          
-          <div class="glass-card gsap-reveal">
-            <h4 class="text-gold">Extended Dwell Time</h4>
-            <p>Our F&B concepts extend average visitor dwell time by over 40%, directly increasing retail conversion opportunities.</p>
-            <br>
-            <a href="#opportunity" class="btn">F&B Leasing →</a>
-          </div>
-        </div>
-        
-        <div class="dining-categories">
-          <div class="dining-cat gsap-reveal">
-            <h4>Fast Casual</h4>
-            <p>High-throughput concepts catering to entertainment and family visitors.</p>
-          </div>
-          <div class="dining-cat gsap-reveal" style="transition-delay: 0.1s;">
-            <h4>Full Service</h4>
-            <p>Sit-down restaurants for destination dining and event-goers.</p>
-          </div>
-          <div class="dining-cat gsap-reveal" style="transition-delay: 0.2s;">
-            <h4>Celebrity Chef</h4>
-            <p>Marquee names driving independent destination traffic.</p>
-          </div>
-          <div class="dining-cat gsap-reveal" style="transition-delay: 0.3s;">
-            <h4>Experiential</h4>
-            <p>Dining combined with interactive elements and unique atmospheres.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <footer>
+    <p>&copy; 2026 American Dream. All rights reserved.</p>
+  </footer>
 
-  <!-- 05 ENTERTAINMENT -->
-  <section id="entertainment">
-    <div class="container">
-      <h2 class="text-gold mb-2">05.</h2>
-      <h3 class="section-title">The Differentiator</h3>
-      <p class="subtitle gsap-reveal">No other retail property in America offers this. Record-breaking attractions that draw international tourism and guarantee year-round regional visitation.</p>
-      
-      <div class="attraction-cards">
-        <div class="attraction-card glass-card gsap-reveal">
-          <img src="assets/images/waterpark.png" alt="DreamWorks Water Park" class="attraction-bg">
-          <div class="attraction-content">
-            <h3 class="text-gold">DreamWorks Water Park</h3>
-            <p>The largest indoor water park in North America.</p>
-          </div>
-        </div>
-        <div class="attraction-card glass-card gsap-reveal" style="transition-delay: 0.1s;">
-          <img src="assets/images/themepark.png" alt="Nickelodeon Universe" class="attraction-bg">
-          <div class="attraction-content">
-            <h3 class="text-gold">Nickelodeon Universe</h3>
-            <p>The Western Hemisphere's largest indoor theme park.</p>
-          </div>
-        </div>
-        <div class="attraction-card glass-card gsap-reveal">
-          <img src="assets/images/big_snow.png" alt="Big SNOW" class="attraction-bg">
-          <div class="attraction-content">
-            <h3 class="text-gold">Big SNOW</h3>
-            <p>North America's first and only indoor, real-snow, year-round ski and snowboard resort.</p>
-          </div>
-        </div>
-        <div class="attraction-card glass-card gsap-reveal" style="transition-delay: 0.1s;">
-          <img src="assets/images/rink.png" alt="The Rink" class="attraction-bg">
-          <div class="attraction-content">
-            <h3 class="text-gold">The Rink</h3>
-            <p>NHL-regulation size ice rink for open skating, hockey tournaments, and private events.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 06 EVENTS & PLATFORM -->
-  <section id="events">
-    <div class="container">
-      <h2 class="text-gold mb-2">06.</h2>
-      <h3 class="section-title">Events & Platform</h3>
-      <p class="subtitle gsap-reveal">A dynamic media and event platform capable of hosting thousands for concerts, brand activations, and cultural moments.</p>
-      
-      <div class="venue-cards">
-        <div class="glass-card gsap-reveal">
-          <h4 class="text-gold mb-2">The Main Stage</h4>
-          <p>Concert-grade venue in the heart of the complex. Ideal for performances, major brand launches, and broadcasts.</p>
-        </div>
-        <div class="glass-card gsap-reveal" style="transition-delay: 0.1s;">
-          <h4 class="text-gold mb-2">Atrium Spaces</h4>
-          <p>High-traffic activation zones perfect for pop-ups, sampling, and immersive brand experiences.</p>
-        </div>
-        <div class="glass-card gsap-reveal" style="transition-delay: 0.2s;">
-          <h4 class="text-gold mb-2">Sponsorship</h4>
-          <p>Property-wide digital network and naming rights opportunities targeting 45M annual impressions.</p>
-        </div>
-      </div>
-      
-      <div class="mt-4 text-center gsap-reveal">
-        <br><br>
-        <a href="#opportunity" class="btn btn-solid">Book a Venue →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 07 THE OPPORTUNITY -->
-  <section id="opportunity">
-    <div class="container">
-      <h2 class="text-gold mb-2">07.</h2>
-      <h3 class="section-title">The Opportunity</h3>
-      
-      <div class="cta-grid">
-        <div class="glass-card gsap-reveal">
-          <h3>Retail & F&B Leasing</h3>
-          <p class="mb-4">Secure your presence in America's most dynamic retail environment.</p>
-          <br>
-          <a href="mailto:leasing@americandream.com" class="btn btn-solid">Contact Leasing</a>
-        </div>
-        <div class="glass-card gsap-reveal" style="transition-delay: 0.1s;">
-          <h3>Brand Partnerships</h3>
-          <p class="mb-4">Amplify your brand through property-wide integrations and sponsorships.</p>
-          <br>
-          <a href="mailto:partnerships@americandream.com" class="btn btn-solid">Contact Partnerships</a>
-        </div>
-        <div class="glass-card gsap-reveal" style="transition-delay: 0.2s;">
-          <h3>Event Booking</h3>
-          <p class="mb-4">Host your next major event, concert, or activation at our unique venues.</p>
-          <br>
-          <a href="mailto:events@americandream.com" class="btn btn-solid">Contact Events</a>
-        </div>
-      </div>
-      
-      <div class="mt-5 text-center gsap-reveal" style="margin-top: 6rem;">
-        <h2 style="font-size: 3rem; margin-bottom: 1rem;">BE PART OF THE DREAM</h2>
-        <p>Join the brands defining the future of experiential retail.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="js/deck.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/counters.js"></script>
 </body>
 </html>

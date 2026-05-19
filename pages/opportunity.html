@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07 The Opportunity | Dream State</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+  
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/nav.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <style>
+    .path-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 3rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+      background: rgba(20,20,24,0.3);
+    }
+    .path-card:hover {
+      border-color: var(--accent-gold);
+      background: rgba(201,168,76,0.05);
+      transform: translateY(-10px);
+    }
+    .path-num {
+      font-family: var(--font-headline);
+      font-size: 2rem;
+      color: rgba(255,255,255,0.2);
+      margin-bottom: 2rem;
+    }
+    .path-title {
+      color: var(--accent-gold);
+      font-family: var(--font-headline);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .path-desc {
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="page-transition-overlay"></div>
+
+  <!-- Persistent Header -->
+  <header class="top-nav scrolled">
+    <a href="../index.html" class="nav-brand">DREAM STATE</a>
+    <nav class="nav-links">
+      <a href="why.html" class="nav-link"><span>01</span> WHY</a>
+      <a href="retail.html" class="nav-link"><span>02</span> RETAIL</a>
+      <a href="luxury.html" class="nav-link"><span>03</span> LUXURY</a>
+      <a href="dining.html" class="nav-link"><span>04</span> DINING</a>
+      <a href="entertainment.html" class="nav-link"><span>05</span> ENTERTAINMENT</a>
+      <a href="events.html" class="nav-link"><span>06</span> EVENTS</a>
+    </nav>
+    <a href="opportunity.html" class="nav-cta">GET IN TOUCH</a>
+    <button class="mobile-menu-btn"><i class="ti ti-menu-2"></i></button>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay">
+    <nav class="mobile-nav-links">
+      <a href="why.html" class="nav-link"><span>01</span> WHY AMERICAN DREAM</a>
+      <a href="retail.html" class="nav-link"><span>02</span> RETAIL LEASING</a>
+      <a href="luxury.html" class="nav-link"><span>03</span> THE LUXURY WING</a>
+      <a href="dining.html" class="nav-link"><span>04</span> DINING & LIFESTYLE</a>
+      <a href="entertainment.html" class="nav-link"><span>05</span> ENTERTAINMENT</a>
+      <a href="events.html" class="nav-link"><span>06</span> EVENTS & PLATFORM</a>
+      <a href="opportunity.html" class="nav-link" style="color: var(--accent-gold)">GET IN TOUCH</a>
+    </nav>
+  </div>
+
+  <main style="padding-top: var(--nav-height);">
+    <!-- Section A: The Statement -->
+    <section class="flex-center" style="min-height: 60vh; text-align: center; background: #000;">
+      <div class="container reveal">
+        <h2 style="font-family: var(--font-headline); font-size: clamp(2rem, 4vw, 3.5rem); font-style: italic; line-height: 1.2; max-width: 1000px; margin: 0 auto;">
+          "You don't just lease space here.<br>You claim a position in the most visited destination in the Northeast."
+        </h2>
+        <p class="text-gold" style="margin-top: 3rem; font-size: 1.2rem; letter-spacing: 0.2em; text-transform: uppercase;">
+          40 million reasons to be here.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section B: Three Paths -->
+    <section>
+      <div class="container">
+        <div class="grid-3">
+          
+          <div class="path-card reveal">
+            <div class="path-num">01</div>
+            <h3 class="path-title">Retail Tenant</h3>
+            <p class="path-desc">Claim your flagship in America's most visited mall.</p>
+            <a href="mailto:leasing@americandream.com" class="btn btn-solid w-full text-center">Begin Leasing Inquiry</a>
+          </div>
+          
+          <div class="path-card reveal delay-100">
+            <div class="path-num">02</div>
+            <h3 class="path-title">Brand Sponsor</h3>
+            <p class="path-desc">Own the moment in front of 40M annual visitors through our property-wide digital network and naming rights.</p>
+            <a href="mailto:sponsorships@americandream.com" class="btn btn-solid w-full text-center">Start a Conversation</a>
+          </div>
+          
+          <div class="path-card reveal delay-200">
+            <div class="path-num">03</div>
+            <h3 class="path-title">Event Partner</h3>
+            <p class="path-desc">Book the stage in front of the most captive audience in the region for your next concert, activation, or launch.</p>
+            <a href="mailto:events@americandream.com" class="btn btn-solid w-full text-center">Check Availability</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="font-family: var(--font-headline); font-size: 1.5rem; color: var(--accent-gold); margin-bottom: 1rem; letter-spacing: 0.1em;">AMERICAN DREAM</div>
+    <p style="margin-bottom: 2rem;"><a href="mailto:contact@americandream.com" style="color: var(--text-secondary); text-decoration: none;">contact@americandream.com</a></p>
+    <p>&copy; 2026 American Dream. All rights reserved.</p>
+  </footer>
+
+  <script src="../assets/js/nav.js"></script>
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

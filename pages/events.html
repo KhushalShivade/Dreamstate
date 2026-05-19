@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06 Events & Platform | Dream State</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+  
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/nav.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <style>
+    .venue-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+    .venue-table th, .venue-table td {
+      padding: 1.5rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .venue-table th {
+      color: var(--accent-gold);
+      font-family: var(--font-headline);
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .venue-table tr:hover td {
+      background: rgba(201, 168, 76, 0.05);
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="page-transition-overlay"></div>
+
+  <!-- Persistent Header -->
+  <header class="top-nav scrolled">
+    <a href="../index.html" class="nav-brand">DREAM STATE</a>
+    <nav class="nav-links">
+      <a href="why.html" class="nav-link"><span>01</span> WHY</a>
+      <a href="retail.html" class="nav-link"><span>02</span> RETAIL</a>
+      <a href="luxury.html" class="nav-link"><span>03</span> LUXURY</a>
+      <a href="dining.html" class="nav-link"><span>04</span> DINING</a>
+      <a href="entertainment.html" class="nav-link"><span>05</span> ENTERTAINMENT</a>
+      <a href="events.html" class="nav-link active"><span>06</span> EVENTS</a>
+    </nav>
+    <a href="opportunity.html" class="nav-cta">GET IN TOUCH</a>
+    <button class="mobile-menu-btn"><i class="ti ti-menu-2"></i></button>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay">
+    <nav class="mobile-nav-links">
+      <a href="why.html" class="nav-link"><span>01</span> WHY AMERICAN DREAM</a>
+      <a href="retail.html" class="nav-link"><span>02</span> RETAIL LEASING</a>
+      <a href="luxury.html" class="nav-link"><span>03</span> THE LUXURY WING</a>
+      <a href="dining.html" class="nav-link"><span>04</span> DINING & LIFESTYLE</a>
+      <a href="entertainment.html" class="nav-link"><span>05</span> ENTERTAINMENT</a>
+      <a href="events.html" class="nav-link" style="color: var(--accent-gold)"><span>06</span> EVENTS & PLATFORM</a>
+      <a href="opportunity.html" class="nav-link">GET IN TOUCH</a>
+    </nav>
+  </div>
+
+  <main style="padding-top: var(--nav-height);">
+    <!-- Section A: The Platform -->
+    <section>
+      <div class="container grid-2">
+        <div class="reveal flex-center" style="flex-direction: column; align-items: flex-start;">
+          <span class="eyebrow">06 · Events & Platform</span>
+          <h2 class="section-title">A global stage. Not just a building.</h2>
+          <p class="subtitle">200+ events annually. Concert-level infrastructure. 15+ designated activation spaces. Foot traffic that no standalone venue in the region can match.</p>
+        </div>
+        <div class="reveal-img" style="background: var(--card-bg); height: 400px; display: flex; align-items: center; justify-content: center;">
+          <p class="text-secondary">[Event/Concert Imagery]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section B: Venue Directory -->
+    <section style="background: #050505;">
+      <div class="container">
+        <h3 class="section-title text-center reveal">Venue Directory</h3>
+        
+        <div class="reveal mt-4">
+          <table class="venue-table">
+            <thead>
+              <tr>
+                <th>Venue</th>
+                <th>Capacity / Size</th>
+                <th>Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Main Event Atrium</strong></td>
+                <td>5,000 standing</td>
+                <td>Concerts, major launches</td>
+              </tr>
+              <tr>
+                <td><strong>Grand Promenade</strong></td>
+                <td>2,000 standing</td>
+                <td>Brand activations, exhibits</td>
+              </tr>
+              <tr>
+                <td><strong>Performing Arts Theater</strong></td>
+                <td>1,200 seats</td>
+                <td>Corporate events, productions</td>
+              </tr>
+              <tr>
+                <td><strong>Convention / Expo Hall</strong></td>
+                <td>50,000 sq ft</td>
+                <td>Trade shows, expos, fan fests</td>
+              </tr>
+              <tr>
+                <td><strong>Rooftop Terrace</strong></td>
+                <td>800 capacity</td>
+                <td>Private events, VIP receptions</td>
+              </tr>
+              <tr>
+                <td><strong>Inline Popup Spaces</strong></td>
+                <td>Flexible (100-2,000 sq ft)</td>
+                <td>Pop-up shops, product sampling</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section C: Event Types -->
+    <section>
+      <div class="container">
+        <h3 class="section-title text-center reveal">What We Host</h3>
+        
+        <div class="grid-4 mt-4" style="margin-top: 3rem;">
+          <div class="glass-card reveal text-center">
+            <h4 class="text-gold mb-2">Concerts & Live Music</h4>
+            <p class="text-secondary text-sm">Full-scale production capabilities.</p>
+          </div>
+          <div class="glass-card reveal delay-100 text-center">
+            <h4 class="text-gold mb-2">Brand Activations</h4>
+            <p class="text-secondary text-sm">Immersive pop-ups with high foot traffic.</p>
+          </div>
+          <div class="glass-card reveal delay-200 text-center">
+            <h4 class="text-gold mb-2">Corporate Events</h4>
+            <p class="text-secondary text-sm">All-hands meetings and retreats.</p>
+          </div>
+          <div class="glass-card reveal delay-300 text-center">
+            <h4 class="text-gold mb-2">Product Launches</h4>
+            <p class="text-secondary text-sm">High-impact reveals with built-in audience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section D: Past Highlights -->
+    <section style="padding-top: 0;">
+      <div class="container text-center reveal">
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 4rem;">
+          <h3 style="font-family: var(--font-headline); font-size: 2.5rem; margin-bottom: 1rem;">200+ events in 2024.</h3>
+          <h3 style="font-family: var(--font-headline); font-size: 2.5rem; color: var(--accent-gold);">40M visitors walked past every activation.</h3>
+        </div>
+        
+        <div class="flex-center mt-5" style="margin-top: 5rem; gap: 2rem;">
+          <a href="entertainment.html" class="btn"><i class="ti ti-arrow-left"></i> Prev</a>
+          <a href="opportunity.html" class="btn btn-solid">Check Venue Availability <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 American Dream. All rights reserved.</p>
+  </footer>
+
+  <script src="../assets/js/nav.js"></script>
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+/* Scroll Reveals & Animations */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* Image reveals */
+.reveal-img {
+  opacity: 0;
+  clip-path: inset(100% 0 0 0);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-img.active {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+}
+
+/* Hero animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-anim-fade {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.hero-anim-slide {
+  opacity: 0;
+  animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hover effects */
+.hover-zoom {
+  overflow: hidden;
+}
+
+.hover-zoom img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-zoom:hover img {
+  transform: scale(1.05);
+}

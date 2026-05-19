@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05 Entertainment | Dream State</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+  
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/nav.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <style>
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: url('../assets/images/themepark.png');
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(10,10,11,0.7);
+      z-index: -1;
+    }
+    
+    .attraction-card {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 3rem;
+      border: 1px solid rgba(201, 168, 76, 0.2);
+    }
+    .attraction-card img {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      transition: transform 0.8s ease;
+    }
+    .attraction-card:hover img {
+      transform: scale(1.05);
+    }
+    .attraction-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to top, rgba(10,10,11,1) 0%, rgba(10,10,11,0) 100%);
+      z-index: -1;
+    }
+    .attraction-card h3 {
+      font-size: 2.5rem;
+      color: var(--accent-gold);
+      margin-bottom: 0.5rem;
+      font-family: var(--font-headline);
+      z-index: 1;
+    }
+    .attraction-card .stat {
+      font-family: var(--font-headline);
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      z-index: 1;
+    }
+    .attraction-card p {
+      z-index: 1;
+      max-width: 80%;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="page-transition-overlay"></div>
+
+  <!-- Persistent Header -->
+  <header class="top-nav">
+    <a href="../index.html" class="nav-brand">DREAM STATE</a>
+    <nav class="nav-links">
+      <a href="why.html" class="nav-link"><span>01</span> WHY</a>
+      <a href="retail.html" class="nav-link"><span>02</span> RETAIL</a>
+      <a href="luxury.html" class="nav-link"><span>03</span> LUXURY</a>
+      <a href="dining.html" class="nav-link"><span>04</span> DINING</a>
+      <a href="entertainment.html" class="nav-link active"><span>05</span> ENTERTAINMENT</a>
+      <a href="events.html" class="nav-link"><span>06</span> EVENTS</a>
+    </nav>
+    <a href="opportunity.html" class="nav-cta">GET IN TOUCH</a>
+    <button class="mobile-menu-btn"><i class="ti ti-menu-2"></i></button>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay">
+    <nav class="mobile-nav-links">
+      <a href="why.html" class="nav-link"><span>01</span> WHY AMERICAN DREAM</a>
+      <a href="retail.html" class="nav-link"><span>02</span> RETAIL LEASING</a>
+      <a href="luxury.html" class="nav-link"><span>03</span> THE LUXURY WING</a>
+      <a href="dining.html" class="nav-link"><span>04</span> DINING & LIFESTYLE</a>
+      <a href="entertainment.html" class="nav-link" style="color: var(--accent-gold)"><span>05</span> ENTERTAINMENT</a>
+      <a href="events.html" class="nav-link"><span>06</span> EVENTS & PLATFORM</a>
+      <a href="opportunity.html" class="nav-link">GET IN TOUCH</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Section A: The Statement -->
+    <section class="min-h-screen flex-center" style="padding-top: 0;">
+      <div class="hero-bg"></div>
+      <div class="overlay"></div>
+      <div class="container text-center reveal">
+        <span class="eyebrow" style="color: #fff;">05 · Entertainment</span>
+        <h1 class="section-title" style="margin-bottom: 0;">No other retail property<br>in America offers this</h1>
+      </div>
+      <div class="scroll-indicator" style="position: absolute; bottom: 2rem; color: var(--accent-gold); animation: bounce 2s infinite;">
+        <i class="ti ti-chevron-down" style="font-size: 2rem;"></i>
+      </div>
+    </section>
+
+    <!-- Section B: The Attractions -->
+    <section style="background: var(--bg-color);">
+      <div class="container">
+        <div class="grid-2" style="gap: 2rem;">
+          <div class="attraction-card reveal">
+            <img src="../assets/images/themepark.png" alt="Nickelodeon Universe">
+            <h3>Nickelodeon Universe</h3>
+            <div class="stat">35,000 sq ft · 30+ rides</div>
+            <p>America's largest indoor theme park.</p>
+          </div>
+          <div class="attraction-card reveal delay-100">
+            <img src="../assets/images/waterpark.png" alt="DreamWorks Water Park">
+            <h3>DreamWorks Water Park</h3>
+            <div class="stat">40,000 sq ft · 40 slides</div>
+            <p>The largest indoor water park in the Western Hemisphere.</p>
+          </div>
+          <div class="attraction-card reveal delay-200">
+            <img src="../assets/images/big_snow.png" alt="Big SNOW">
+            <h3>Big SNOW</h3>
+            <div class="stat">Open year-round</div>
+            <p>The only indoor real-snow ski slope in the United States.</p>
+          </div>
+          <div class="attraction-card reveal delay-300">
+            <img src="../assets/images/rink.png" alt="The Rink">
+            <h3>The Rink</h3>
+            <div class="stat">Open year-round</div>
+            <p>NHL regulation ice rink for open skating and events.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section C: Why It Matters for Partners -->
+    <section style="background: #050505;">
+      <div class="container text-center">
+        <h3 class="section-title reveal">Why It Matters</h3>
+        
+        <div class="grid-3 mt-4" style="margin-top: 4rem;">
+          <div class="reveal">
+            <i class="ti ti-clock-play text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+            <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Drives 4–6 hour dwell times</h4>
+          </div>
+          <div class="reveal delay-100">
+            <i class="ti ti-users text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+            <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Attracts families, millennials, and tourists simultaneously</h4>
+          </div>
+          <div class="reveal delay-200">
+            <i class="ti ti-camera text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+            <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Creates earned media and social content at scale</h4>
+          </div>
+        </div>
+        
+        <div class="flex-center mt-5" style="margin-top: 5rem; gap: 2rem;">
+          <a href="dining.html" class="btn"><i class="ti ti-arrow-left"></i> Prev</a>
+          <a href="events.html" class="btn btn-solid">Next: Events <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 American Dream. All rights reserved.</p>
+  </footer>
+
+  <script src="../assets/js/nav.js"></script>
+  <script src="../assets/js/animations.js"></script>
+  <style>
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 Dining & Lifestyle | Dream State</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+  
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/nav.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <style>
+    .mosaic {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 250px);
+      gap: 1rem;
+      position: relative;
+    }
+    .mosaic-item { background: #111; display: flex; align-items: center; justify-content: center; }
+    .mosaic-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+    .mosaic-overlay {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(10,10,11,0.85);
+      padding: 3rem 5rem;
+      border: 1px solid var(--accent-gold);
+      text-align: center;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="page-transition-overlay"></div>
+
+  <!-- Persistent Header -->
+  <header class="top-nav scrolled">
+    <a href="../index.html" class="nav-brand">DREAM STATE</a>
+    <nav class="nav-links">
+      <a href="why.html" class="nav-link"><span>01</span> WHY</a>
+      <a href="retail.html" class="nav-link"><span>02</span> RETAIL</a>
+      <a href="luxury.html" class="nav-link"><span>03</span> LUXURY</a>
+      <a href="dining.html" class="nav-link active"><span>04</span> DINING</a>
+      <a href="entertainment.html" class="nav-link"><span>05</span> ENTERTAINMENT</a>
+      <a href="events.html" class="nav-link"><span>06</span> EVENTS</a>
+    </nav>
+    <a href="opportunity.html" class="nav-cta">GET IN TOUCH</a>
+    <button class="mobile-menu-btn"><i class="ti ti-menu-2"></i></button>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay">
+    <nav class="mobile-nav-links">
+      <a href="why.html" class="nav-link"><span>01</span> WHY AMERICAN DREAM</a>
+      <a href="retail.html" class="nav-link"><span>02</span> RETAIL LEASING</a>
+      <a href="luxury.html" class="nav-link"><span>03</span> THE LUXURY WING</a>
+      <a href="dining.html" class="nav-link" style="color: var(--accent-gold)"><span>04</span> DINING & LIFESTYLE</a>
+      <a href="entertainment.html" class="nav-link"><span>05</span> ENTERTAINMENT</a>
+      <a href="events.html" class="nav-link"><span>06</span> EVENTS & PLATFORM</a>
+      <a href="opportunity.html" class="nav-link">GET IN TOUCH</a>
+    </nav>
+  </div>
+
+  <main style="padding-top: var(--nav-height);">
+    <!-- Section A: The Story -->
+    <section style="padding-top: 2rem;">
+      <div class="container" style="max-width: 100%;">
+        <div class="mosaic reveal-img">
+          <div class="mosaic-item"><p class="text-secondary">[Food Hall]</p></div>
+          <div class="mosaic-item"><p class="text-secondary">[Dish]</p></div>
+          <div class="mosaic-item"><p class="text-secondary">[Bar]</p></div>
+          <div class="mosaic-item"><p class="text-secondary">[Coffee]</p></div>
+          <div class="mosaic-item"><p class="text-secondary">[Outdoor]</p></div>
+          
+          <div class="mosaic-overlay reveal delay-300">
+            <h2 class="section-title" style="margin:0;">Dining as destination</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section B: The Offer -->
+    <section>
+      <div class="container grid-2">
+        <div class="reveal">
+          <span class="eyebrow">04 · Dining & Lifestyle</span>
+          <h2 class="section-title">100+ dining concepts.<br>Zero compromises.</h2>
+          <div class="glass-card mt-4" style="margin-top: 2rem; border-color: var(--accent-gold);">
+            <div class="eyebrow">Average Dwell Time</div>
+            <div class="text-gold" style="font-size: 4rem; font-family: var(--font-headline); line-height: 1;">4.2 Hours</div>
+            <p style="margin-top: 1rem;">Highest in the region, directly driven by our comprehensive dining offerings.</p>
+          </div>
+        </div>
+        <div class="reveal delay-100">
+          <div class="grid-2" style="gap: 2rem;">
+            <div class="glass-card" style="padding: 2rem;">
+              <h4 class="text-gold" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Fast Casual</h4>
+              <p class="text-secondary" style="font-size: 0.9rem;">High-throughput for entertainment goers.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+              <h4 class="text-gold" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Full Service</h4>
+              <p class="text-secondary" style="font-size: 0.9rem;">Destination dining for events.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+              <h4 class="text-gold" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Celebrity Chef</h4>
+              <p class="text-secondary" style="font-size: 0.9rem;">Marquee names driving traffic.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+              <h4 class="text-gold" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Experiential</h4>
+              <p class="text-secondary" style="font-size: 0.9rem;">Dining combined with interaction.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+              <h4 class="text-gold" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Bar & Lounge</h4>
+              <p class="text-secondary" style="font-size: 0.9rem;">Premium environments.</p>
+            </div>
+            <div class="glass-card" style="padding: 2rem;">
+              <h4 class="text-gold" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Grab & Go</h4>
+              <p class="text-secondary" style="font-size: 0.9rem;">Quick stops across the property.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section C: The Opportunity -->
+    <section style="background: #050505;">
+      <div class="container text-center">
+        <div class="glass-card reveal mx-auto" style="max-width: 800px; padding: 4rem;">
+          <h3 class="section-title">The F&B Opportunity</h3>
+          <p class="subtitle" style="margin: 0 auto 2rem auto;">High captive traffic. A customer already in spend mode. A food hall environment that drives repeat visits.</p>
+          <a href="opportunity.html" class="btn btn-solid">Explore F&B Leasing <i class="ti ti-arrow-right"></i></a>
+        </div>
+        
+        <div class="flex-center mt-5" style="margin-top: 5rem; gap: 2rem;">
+          <a href="luxury.html" class="btn"><i class="ti ti-arrow-left"></i> Prev</a>
+          <a href="entertainment.html" class="btn">Next: Entertainment <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 American Dream. All rights reserved.</p>
+  </footer>
+
+  <script src="../assets/js/nav.js"></script>
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>
